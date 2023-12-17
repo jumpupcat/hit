@@ -17,7 +17,17 @@ class Header extends Component {
 
       window.havah.connect()
       .then(res => {
-        console.log(res)
+        let nid;
+        if(res?.nid) {
+          nid = res.nid;
+        } else if(res?.body?.nid) {
+          nid = res.body.nid;
+        }
+        
+        if(nid !== '0x100') {
+          toast.error("wrong network, mint only mainnet");
+          return;
+        }
         
         const transactionData = {
           to: tokenAddr,
