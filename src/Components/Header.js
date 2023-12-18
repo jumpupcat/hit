@@ -8,7 +8,7 @@ class Header extends Component {
   render() {
     // TODO: addr, url change
     const tokenAddr = 'cx1acb719f8deb65981296be7c0fdff5a6f1d94606'
-    const info = `https://scan.vega.havah.io/token/${tokenAddr}`;
+    const scan = `https://scan.vega.havah.io/token/${tokenAddr}`;
 
     const mint = () => {
       if(!window.havah) {
@@ -76,8 +76,8 @@ class Header extends Component {
                 <button className="button btn project-btn" onClick={() => mint()}>
                   MINT
                 </button>
-                <a href={info} className="button btn github-btn" target="_blank" rel="noreferrer">
-                  INFO
+                <a href={scan} className="button btn github-btn" target="_blank" rel="noreferrer">
+                  SCAN
                 </a>
               </ul>
             </Fade>
