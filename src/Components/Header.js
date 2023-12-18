@@ -6,9 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 class Header extends Component {
   render() {
-    // TODO: addr, url change
-    const tokenAddr = 'cx1acb719f8deb65981296be7c0fdff5a6f1d94606'
-    const scan = `https://scan.vega.havah.io/token/${tokenAddr}`;
+    const tokenAddr = 'cxd8303731bf989a1597a6d38505d7a9483c4d9a38'
+    const scan = `https://scan.havah.io/token/${tokenAddr}`;
 
     const mint = () => {
       if(!window.havah) {
@@ -25,9 +24,8 @@ class Header extends Component {
           nid = res.body.nid;
         }
         
-        // TODO: message change 0x100
-        if(nid !== '0x101') {
-          toast.error("wrong network, mint only testnet");
+        if(nid !== '0x100') {
+          toast.error("wrong network, mint only mainnet");
           return;
         }
         
