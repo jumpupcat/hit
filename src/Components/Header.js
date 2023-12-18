@@ -7,6 +7,7 @@ class Header extends Component {
   render() {
     const tokenAddr = 'cxd8303731bf989a1597a6d38505d7a9483c4d9a38'
     const scan = `https://scan.havah.io/token/${tokenAddr}`;
+    const twitter = 'https://twitter.com/godhavah';
 
     const mint = () => {
       if(!window.havah) {
@@ -70,6 +71,9 @@ class Header extends Component {
                 </button>
                 <a href={scan} className="button btn github-btn" target="_blank" rel="noreferrer">
                   SCAN
+                </a>
+                <a href={twitter} className="button btn twitter-btn" target="_blank" rel="noreferrer">
+                  TWITTER
                 </a>
               </ul>
           </div>

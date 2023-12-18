@@ -1022,3 +1022,8 @@ footer .social-links li:first-child { margin-left: 0; }
 .github-btn{
    background-color: #34495e !important;
 }
+.twitter-btn{
+   color: #fff;
+   background: #0D0D0D;
+   margin-left: 30px;
+}
