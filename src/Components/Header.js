@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
-import Fade from "react-reveal";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -55,21 +54,16 @@ class Header extends Component {
 
         <div className="row banner">
           <div className="banner-text">
-            <Fade bottom>
               <h1 className="responsive-headline">
                 $GODH<span style={{ color: 'black' }}>AVAH</span>
               </h1>
-            </Fade>
-            <Fade bottom duration={1200}>
               <h3>
                 Total Supply 21,000,000<br />
                 Only need to pay gas fee<br />
                 No roadmap No utility No owner<br />
                 1 MINT = 1 $GODH
               </h3>
-            </Fade>
             <hr />
-            <Fade bottom duration={2000}>
               <ul className="social">
                 <button className="button btn project-btn" onClick={() => mint()}>
                   MINT
@@ -78,7 +72,6 @@ class Header extends Component {
                   SCAN
                 </a>
               </ul>
-            </Fade>
           </div>
         </div>
 
