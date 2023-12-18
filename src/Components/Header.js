@@ -64,10 +64,10 @@ class Header extends Component {
             </Fade>
             <Fade bottom duration={1200}>
               <h3>
-                There's total 21,000,000 slots.<br />
-                Only need to pay gas fee.<br />
-                No roadmap. No utility. No owner.<br />
-                1 MINT = 1 GODH
+                Total Supply 21,000,000<br />
+                Only need to pay gas fee<br />
+                No roadmap No utility No owner<br />
+                1 MINT = 1 $GODH
               </h3>
             </Fade>
             <hr />
