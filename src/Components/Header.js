@@ -27,8 +27,8 @@ export default function Header() {
     })
     .then(({ data }) => {
       if(data && data?.result) {
-        const supply = parseInt(data.result, 16)
-        setSupply(supply / 1000000)
+        const supply = parseInt(data.result, 16) / 1000000;
+        setSupply(Math.round(supply/21000000*100))
       }
     });
   }, []); 
@@ -91,7 +91,7 @@ export default function Header() {
               { supply.toLocaleString() }/21,000,000
             </h3>
 
-            <ProgressBar completed={supply/21000000*100} />
+            <ProgressBar completed={supply} />
             <hr />
             
             <ul className="social">
