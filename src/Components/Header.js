@@ -91,7 +91,7 @@ export default function Header() {
               { supply.toLocaleString() }/21,000,000
             </h3>
 
-            <ProgressBar completed={supply/21000000*100} />
+            <ProgressBar completed={Math.round(supply/21000000*100)} />
             <hr />
             
             <ul className="social">
