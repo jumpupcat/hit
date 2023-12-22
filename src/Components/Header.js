@@ -27,13 +27,18 @@ export default function Header() {
     })
     .then(({ data }) => {
       if(data && data?.result) {
-        const supply = parseInt(data.result, 16)
-        setSupply(supply / 1000000)
+        const supply = parseInt(data.result, 16);
+        setSupply(supply / 1000000);
       }
     });
   }, []); 
 
   const mint = () => {
+    if(supply >= 21_000_000) {
+      toast.error("$GODH SOLD OUT");
+      return
+    }
+
     if(!window.havah) {
       toast.error("HAVAH wallet is not installed");
       return;
@@ -60,7 +65,10 @@ export default function Header() {
       
       window.havah.sendTransaction(transactionData)
       .then(({ type }) => {
-        if(type === 'success') toast.success("mint success");
+        if(type === 'success') {
+          toast.success("mint success");
+          setSupply(prev => prev+1);
+        }
       })
       .catch(error => {
         toast.error("tx send error, try again");
