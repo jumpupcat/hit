@@ -92,8 +92,8 @@ export default function Header() {
             </h1>
             <h3>
               Total Supply 21,000,000<br />
-              {/* Only need to pay gas fee<br /> */}
-              No roadmap No utility No owner
+              No roadmap No utility No owner<br />
+              Just meme, enjoy!
             </h3>
 
             {/* <ProgressBar completed={Math.round(supply/21000000*100)} />
