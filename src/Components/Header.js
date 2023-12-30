@@ -1,8 +1,8 @@
 // import React, { useState, useEffect } from "react";
 // import axios from 'axios';
 import ParticlesBg from "particles-bg";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
 // import ProgressBar from "@ramonak/react-progress-bar";
 
 export default function Header() {
@@ -93,7 +93,7 @@ export default function Header() {
             <h3>
               Total Supply 21,000,000<br />
               Only need to pay gas fee<br />
-              No roadmap No utility No owner<br />
+              No roadmap No utility No owner
             </h3>
 
             {/* <ProgressBar completed={Math.round(supply/21000000*100)} />
@@ -113,7 +113,7 @@ export default function Header() {
         </div>
       </div>
 
-      <ToastContainer
+      {/* <ToastContainer
         position="top-center"
         autoClose={2000}
         hideProgressBar
@@ -124,7 +124,7 @@ export default function Header() {
         draggable
         pauseOnHover
         theme="colored"          
-      />
+      /> */}
     </header>
   );
 }
