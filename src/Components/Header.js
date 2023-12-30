@@ -92,7 +92,7 @@ export default function Header() {
             </h1>
             <h3>
               Total Supply 21,000,000<br />
-              Only need to pay gas fee<br />
+              {/* Only need to pay gas fee<br /> */}
               No roadmap No utility No owner
             </h3>
 
