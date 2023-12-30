@@ -1,8 +1,8 @@
 {
-    "totalHvh": 54869.59520465271,
-    "totalGodh": 1118285.5852939999,
-    "lastPrice": 0.04891857520105787,
-    "lastUpdate": 1703937310380,
+    "totalHvh": 52753.16727177718,
+    "totalGodh": 1163196.4852939998,
+    "lastPrice": 0.04521580250551213,
+    "lastUpdate": 1703938678503,
     "data": [
         {
             "godh": 1,
@@ -11504,6 +11504,13 @@
             "txHash": "0xaf59656c82951357e8f1b97cbb8abdabbf21b4e1a43580cb342afee390a09966",
             "timestamp": 1703937129000,
             "price": 0.04891857520105787
+        },
+        {
+            "godh": 44910.9,
+            "hvh": -2116.4279328755324,
+            "txHash": "0xbd20a4a49570bc2eaafaa7661ee0cfedc4890f263ccb7a270c05751a6b2aa3a5",
+            "timestamp": 1703937541000,
+            "price": 0.04521580250551213
         }
     ]
 }
