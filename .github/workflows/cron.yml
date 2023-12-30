@@ -1,4 +1,4 @@
-name: planet
+name: price
 
 on: 
   schedule:
@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      - name: get planet
+      - name: get price
         run: node src/assets/getPrice.js
 
       - name: Push Github
@@ -27,5 +27,5 @@ jobs:
           git config --global user.email "jumpupmoon@gmail.com"
           git pull origin main
           git add .
-          git commit -m "cron get planet" || exit 0
+          git commit -m "cron get price" || exit 0
           git push
