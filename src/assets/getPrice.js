@@ -71,6 +71,7 @@ const checker = async () => {
     totalHvh,
     totalGodh,
     lastPrice: currentPrice,
+    lastUpdate: new Date().getTime(),
     data: currentData
   }
 
