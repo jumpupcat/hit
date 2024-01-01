@@ -1,17 +1,16 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { Component } from "react";
 import Header from "./Components/Header";
 import GodhChart from "./Components/GodhChart";
 
-export default function App() {
-  return (
-    <div className="App">
-      <Header />
-      
-      <BrowserRouter>
-        <Routes>
-          <Route path="*" element={<GodhChart />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <GodhChart />
+      </div>
+    );
+  }
 }
+
+export default App;
