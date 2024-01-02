@@ -1,20 +1,52 @@
 const axios = require('axios');
 const fs = require('fs');
 const wait = require("wait");
-const godhFileName = 'src/assets/godh.json';
-const godhAddr = 'cx8fbc79c2bcb7c24accb5756bc24bb8ed6b87d312';
-const hhFileName = 'src/assets/hh.json';
-const hhAddr = 'cxdfd439eb7e6775938fd9d6294f8297cac2e9d9ab';
+const fileName = 'src/assets/chartData.json';
+let saveData;
 
-const godhChecker = async () => {
-  const saveData = JSON.parse(fs.readFileSync(godhFileName));
-  const currentData = saveData?.data ? saveData?.data : [];
+const checkList = [
+  {
+    tokenB: 'GODH',
+    pool: 'cx8fbc79c2bcb7c24accb5756bc24bb8ed6b87d312',
+    tokenA: 'WHVH',
+    rate: 0.997
+  },
+  {
+    tokenB: 'HH',
+    pool: 'cxdfd439eb7e6775938fd9d6294f8297cac2e9d9ab',
+    tokenA: 'GODH',
+    rate: 0.997
+  },
+  {
+    tokenB: 'PER',
+    pool: 'cx0fa6dea3d926105a99749449f32c64ed8d5aa45c',
+    tokenA: 'ttUSDTp',
+    rate: 0.98
+  },
+  {
+    tokenB: 'XPER',
+    pool: 'cxc0b5a307221589950e1fc23d35759a7b84f6b0e3',
+    tokenA: 'ttUSDTp',
+    rate: 0.98
+  },
+  {
+    tokenB: 'sHVH',
+    pool: 'cxc5624770e0b63a9890e779194027f9a9e9b9d36b',
+    tokenA: 'WHVH',
+    rate: 0.997
+  },
+];
+
+const checker = async (a, b, pool, rate) => {
+  saveData = JSON.parse(fs.readFileSync(fileName));
+  const tagetData = saveData[b];
+  const currentData = tagetData?.data ? tagetData?.data : [];
   const lastData = currentData[currentData.length-1];
 
   let currentPage = 1;
   let totalSize;
   do {
-    const { data } = await axios.get(`https://scan.havah.io/v3/address/tokenTxList?address=${godhAddr}&page=${currentPage++}&count=100`);
+    const { data } = await axios.get(`https://scan.havah.io/v3/address/tokenTxList?address=${pool}&page=${currentPage++}&count=100`);
 
     if(!totalSize) totalSize = data.totalSize;
 
@@ -27,132 +59,63 @@ const godhChecker = async () => {
       }
 
       let temp = currentData.find((v) => v.txHash == tx.txHash);
-      let flag = true;
       if(!temp) {
         temp = {
-          godh: 0,
-          hvh: 0
+          [a]: 0,
+          [b]: 0
         };
         temp.txHash = tx.txHash;
         temp.timestamp = new Date(`${tx.timestamp} GMT`).getTime();
-      } else {
-        flag = false
+
+        currentData.push(temp);
       }
 
       let amount = Number(tx.quantity);
-      if(tx.fromAddr == godhAddr) amount *= -1;
+      if(tx.fromAddr == pool) amount *= -1;
 
-      if(tx.scoreSymbol == 'GODH') {
-        temp.godh += amount;
-      } else if(tx.scoreSymbol == 'WHVH') {
-        temp.hvh += amount;
+      if(tx.scoreSymbol == a) {
+        temp[a] += amount;
+      } else if(tx.scoreSymbol == b) {
+        temp[b] += amount;
       }
-
-      if(flag) currentData.push(temp);
     }
 
-    await wait(1000);
+    await wait(200);
   } while(currentPage <= Math.ceil(totalSize/100));
 
-  let totalHvh = saveData?.totalHvh ? saveData?.totalHvh : 0;
-  let totalGodh = saveData?.totalGodh ? saveData?.totalGodh : 0;
-  const lastPrice = saveData?.lastPrice ? saveData?.lastPrice : 0;
+  let totalA = tagetData?.totalA ? tagetData?.totalA : 0;
+  let totalB = tagetData?.totalB ? tagetData?.totalB : 0;
+  const lastPrice = tagetData?.lastPrice ? tagetData?.lastPrice : 0;
   let currentPrice = lastPrice;
 
   currentData.sort((a, b) => a.timestamp - b.timestamp);
   for(const v of currentData) {
     if(v.price) continue;
-    totalHvh += v.hvh;
-    totalGodh += v.godh;
+    totalA += v[a];
+    totalB += v[b];
   
-    currentPrice = totalHvh / (totalGodh+1) * 0.997
+    currentPrice = totalA / (totalB+1) * rate
     v.price = currentPrice;
   }
 
   const outputData = {
-    totalHvh,
-    totalGodh,
-    lastPrice: currentPrice,
+    ...saveData,
     lastUpdate: new Date().getTime(),
-    data: currentData
-  }
-
-  fs.writeFileSync(godhFileName, JSON.stringify(outputData, null, 4));
-}
-
-const hhChecker = async () => {
-  const saveData = JSON.parse(fs.readFileSync(hhFileName));
-  const currentData = saveData?.data ? saveData?.data : [];
-  const lastData = currentData[currentData.length-1];
-
-  let currentPage = 1;
-  let totalSize;
-  do {
-    const { data } = await axios.get(`https://scan.havah.io/v3/address/tokenTxList?address=${hhAddr}&page=${currentPage++}&count=100`);
-
-    if(!totalSize) totalSize = data.totalSize;
-
-    for(const tx of data.data) {
-      if(tx.scoreSymbol == 'HTP') continue;
-      
-      if(lastData?.txHash == tx.txHash) {
-        totalSize = 1;
-        break;
-      }
-
-      let temp = currentData.find((v) => v.txHash == tx.txHash);
-      let flag = true;
-      if(!temp) {
-        temp = {
-          godh: 0,
-          hh: 0
-        };
-        temp.txHash = tx.txHash;
-        temp.timestamp = new Date(`${tx.timestamp} GMT`).getTime();
-      } else {
-        flag = false
-      }
-
-      let amount = Number(tx.quantity);
-      if(tx.fromAddr == hhAddr) amount *= -1;
-
-      if(tx.scoreSymbol == 'GODH') {
-        temp.godh += amount;
-      } else if(tx.scoreSymbol == 'HH') {
-        temp.hh += amount;
-      }
-
-      if(flag) currentData.push(temp);
+    [b]: {
+      tokenB: b,
+      tokenA: a,
+      totalA,
+      totalB,
+      lastPrice: currentPrice,
+      data: currentData
     }
-
-    await wait(1000);
-  } while(currentPage <= Math.ceil(totalSize/100));
-
-  let totalHh = saveData?.totalHh ? saveData?.totalHh : 0;
-  let totalGodh = saveData?.totalGodh ? saveData?.totalGodh : 0;
-  const lastPrice = saveData?.lastPrice ? saveData?.lastPrice : 0;
-  let currentPrice = lastPrice;
-
-  currentData.sort((a, b) => a.timestamp - b.timestamp);
-  for(const v of currentData) {
-    if(v.price) continue;
-    totalHh += v.hh;
-    totalGodh += v.godh;
-  
-    currentPrice = totalGodh / (totalHh+1) * 0.997
-    v.price = currentPrice;
   }
 
-  const outputData = {
-    totalHh,
-    totalGodh,
-    lastPrice: currentPrice,
-    lastUpdate: new Date().getTime(),
-    data: currentData
-  }
-
-  fs.writeFileSync(hhFileName, JSON.stringify(outputData, null, 4));
+  fs.writeFileSync(fileName, JSON.stringify(outputData, null, 4));
 }
 
-godhChecker();
-hhChecker();
+(async () => {
+  for(const c of checkList) {
+    await checker(c.tokenA, c.tokenB, c.pool, c.rate);
+  }
+})();
