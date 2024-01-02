@@ -18,18 +18,6 @@ const checkList = [
     rate: 0.997
   },
   {
-    tokenB: 'PER',
-    pool: 'cx0fa6dea3d926105a99749449f32c64ed8d5aa45c',
-    tokenA: 'ttUSDTp',
-    rate: 0.98
-  },
-  {
-    tokenB: 'XPER',
-    pool: 'cxc0b5a307221589950e1fc23d35759a7b84f6b0e3',
-    tokenA: 'ttUSDTp',
-    rate: 0.98
-  },
-  {
     tokenB: 'sHVH',
     pool: 'cxc5624770e0b63a9890e779194027f9a9e9b9d36b',
     tokenA: 'WHVH',
