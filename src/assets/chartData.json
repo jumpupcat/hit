@@ -1,11 +1,11 @@
 {
-    "lastUpdate": 1704284998861,
+    "lastUpdate": 1704286444788,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
-        "totalA": 32506.978893189247,
-        "totalB": 1398853.1000400002,
-        "lastPrice": 0.023168576305122122,
+        "totalA": 36698.662893189234,
+        "totalB": 1239230.1795559998,
+        "lastPrice": 0.02952521491399116,
         "data": [
             {
                 "WHVH": 1,
@@ -12137,6 +12137,118 @@
                 "txHash": "0xde7b8584a387776e35fb5a740e2be1c4f7c7ba8f7a6929866221f96c83cb51a6",
                 "timestamp": 1704281517000,
                 "price": 0.023168576305122122
+            },
+            {
+                "WHVH": 998.02,
+                "GODH": -41626.594416,
+                "txHash": "0x45307f9d3ac3ff76f41033119d9ab5779e845ff4caf2e735804b23c6e032ded2",
+                "timestamp": 1704285065000,
+                "price": 0.024612295107555752
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -8029.544335,
+                "txHash": "0x46a7a651bf20b8b6c7c333c0fac1a1ddddeac9aa3452194058369490046c34e5",
+                "timestamp": 1704285111000,
+                "price": 0.024906270279570753
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7935.04752,
+                "txHash": "0xbb4b917d6e57a6be2f201c5732ce0721a67aafdb376ae2bb9d8b508d083873b6",
+                "timestamp": 1704285137000,
+                "price": 0.025201989800436198
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7842.209372,
+                "txHash": "0xbfa18498f0075fd32940b54fe6dd8f195e9553fa99116bb4fe96693dcb1fd8ed",
+                "timestamp": 1704285164000,
+                "price": 0.025499453659590384
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7750.991295,
+                "txHash": "0xf62ddc962b893cd6e838c58c36b094618ed0210fc82597f44244af8a43859799",
+                "timestamp": 1704285176000,
+                "price": 0.02579866184653357
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7661.355811,
+                "txHash": "0x99c0243caf92da50f2728d3621f68f2fb8ef71213e14f54e5f4fca73df9a6a22",
+                "timestamp": 1704285198000,
+                "price": 0.026099614350863092
+            },
+            {
+                "WHVH": 399.208,
+                "GODH": -15059.998325,
+                "txHash": "0xc03379d764258559c60c6ddc6edfa78d4fa48642b83f114b9e258ac1be78eedb",
+                "timestamp": 1704285224000,
+                "price": 0.026706753167197245
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7401.585805,
+                "txHash": "0x3c567ceac6b4736415f582acfd2cc1da8f27ff7425c38ea740dbe0833116e681",
+                "timestamp": 1704285249000,
+                "price": 0.02701293857196817
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7317.9269,
+                "txHash": "0x435ef5999cbfea629f8b797651cf077f4a1596eaf41b4e025a4bac04a1f0684f",
+                "timestamp": 1704285284000,
+                "price": 0.02732086825307662
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7235.678634,
+                "txHash": "0xafdf7852527ab3e7261c047f60fad7087ba664ddd1ecbbc89f7437dccc6e03e3",
+                "timestamp": 1704285301000,
+                "price": 0.02763054220037485
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7154.809468,
+                "txHash": "0x9694b7a610323317105ebb706c2af7e60784d10154f8b046f0f0ae7f3084385d",
+                "timestamp": 1704285312000,
+                "price": 0.027941960403791592
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -7075.288739,
+                "txHash": "0x4a4ec3979cb26e63903e33a91039f24817a0befadcac532af9684a78a3fa9d80",
+                "timestamp": 1704285510000,
+                "price": 0.028255122853319086
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -6997.08663,
+                "txHash": "0xeafe402818bf22ee76d4039939d0950ab620178ec3ecfda943a919eea3d1b4ce",
+                "timestamp": 1704285525000,
+                "price": 0.02857002953897778
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -6920.174146,
+                "txHash": "0x0bb6ae6fb4a7c0fc63c79badda631b38186bd8cba64f336f5bfe4694d43b902c",
+                "timestamp": 1704285540000,
+                "price": 0.0288866804508689
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -6844.523083,
+                "txHash": "0xbb0128505cdfe20779de871fffe7f0e72e4a36beac7678983543e92c87435c71",
+                "timestamp": 1704285551000,
+                "price": 0.029205075579136038
+            },
+            {
+                "WHVH": 199.604,
+                "GODH": -6770.106005,
+                "txHash": "0x9c6e42ae93ec6d5950964c93cd35468e644d997651e962743a0980ca5490c711",
+                "timestamp": 1704285564000,
+                "price": 0.02952521491399116
             }
         ]
     },
