@@ -38,7 +38,7 @@ const timeFormat = (t) => {
 	return d.toISOString().replace("T", " ").substring(0, 19);
 }
 
-const tokenList = ['GODH', 'sHVH'];
+const tokenList = ['GODH', 'HH', 'sHVH'];
 export default function GodhChart() {
 	const [symbolNum, setSymbolNum] = useState(0);
 	const ref = useRef();
