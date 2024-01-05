@@ -42,7 +42,7 @@ export default function Header() {
               Total Supply 21,000,000<br />
               No roadmap No utility No owner<br />
               Just meme, enjoy!<br /><br />
-              Burning hell: { amount.toLocaleString() }
+              Burning hell: { Math.round(amount).toLocaleString() }
             </h3>
         </div>
       </div>
