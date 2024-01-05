@@ -1,11 +1,11 @@
 {
-    "lastUpdate": 1704455713068,
+    "lastUpdate": 1704457876581,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
-        "totalA": 33660.93053721342,
-        "totalB": 1492306.3852039995,
-        "lastPrice": 0.02248862940594113,
+        "totalA": 33572.39942233615,
+        "totalB": 1496245.6541769996,
+        "lastPrice": 0.022370430791359072,
         "data": [
             {
                 "WHVH": 1,
@@ -12578,6 +12578,13 @@
                 "txHash": "0x5ae1a63b8bf7ac01ee713268ea855adcb7c1554cb739ff6171fe041eb93eb426",
                 "timestamp": 1704455500000,
                 "price": 0.02248862940594113
+            },
+            {
+                "WHVH": -88.53111487726581,
+                "GODH": 3939.2689729999997,
+                "txHash": "0x32596eeeb4517aaf7abf17590c6a1986c530f8342202d44a46ff0f1bdd9702f1",
+                "timestamp": 1704457651000,
+                "price": 0.022370430791359072
             }
         ]
     },
@@ -16137,9 +16144,9 @@
     "ttUSDTp": {
         "tokenB": "ttUSDTp",
         "tokenA": "ttUSDTe",
-        "totalA": 11529.071166999998,
-        "totalB": 11316.286284000049,
-        "lastPrice": 1.0136198310528617,
+        "totalA": 11561.996665999997,
+        "totalB": 11284.093438000049,
+        "lastPrice": 1.0194143934982585,
         "data": [
             {
                 "ttUSDTe": 1581.565824,
@@ -22468,6 +22475,20 @@
                 "txHash": "0x1c71edcf3d1be68b861e59311657962da2ff167fb5fef8cf454cf3afbf97ac8b",
                 "timestamp": 1704454782000,
                 "price": 1.0136198310528617
+            },
+            {
+                "ttUSDTe": 15.320586,
+                "ttUSDTp": -15.002506,
+                "txHash": "0xef9a3a2a3eff590e939d482ecbc332db949d8ee9d6ff9139932e827c759a0662",
+                "timestamp": 1704456387000,
+                "price": 1.0163140494307759
+            },
+            {
+                "ttUSDTe": 17.604913,
+                "ttUSDTp": -17.19034,
+                "txHash": "0xc580b2e7ad99ccd56d5fb1bd2dc8f7df7ae7447d018cdd5b5c19dd56f3c1e852",
+                "timestamp": 1704456429000,
+                "price": 1.0194143934982585
             }
         ]
     }
