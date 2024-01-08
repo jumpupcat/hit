@@ -1,5 +1,5 @@
 {
-    "lastUpdate": 1704684857365,
+    "lastUpdate": 1704685607422,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
@@ -17873,9 +17873,9 @@
     "ttUSDTp": {
         "tokenB": "ttUSDTp",
         "tokenA": "ttUSDTe",
-        "totalA": 11622.108558999995,
-        "totalB": 11235.873169000071,
-        "lastPrice": 1.0291117326221484,
+        "totalA": 11598.987807999994,
+        "totalB": 11258.449840000072,
+        "lastPrice": 1.025005043138051,
         "data": [
             {
                 "ttUSDTe": 1581.565824,
@@ -24911,6 +24911,20 @@
                 "txHash": "0x40e330c1741efeea904739952211f722c4f7f95e9acd69cff5a64c88d69c13de",
                 "timestamp": 1704684632000,
                 "price": 1.0291117326221484
+            },
+            {
+                "ttUSDTe": -102.016915,
+                "ttUSDTp": 99.602,
+                "txHash": "0x8f8ff9bc4f48da6b58b6d421f8d88028cf01226ab8f4b5b37144d9e6634eb1f9",
+                "timestamp": 1704685221000,
+                "price": 1.0111159787236614
+            },
+            {
+                "ttUSDTe": 78.896164,
+                "ttUSDTp": -77.025329,
+                "txHash": "0x058a4fba1eb42ddc6c14c47fa6d2b70a455c74e97f06d1df896642271f778b33",
+                "timestamp": 1704685396000,
+                "price": 1.025005043138051
             }
         ]
     }
