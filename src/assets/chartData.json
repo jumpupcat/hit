@@ -1,5 +1,5 @@
 {
-    "lastUpdate": 1705103755287,
+    "lastUpdate": 1705108739099,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
@@ -19056,9 +19056,9 @@
     "ttUSDTp": {
         "tokenB": "ttUSDTp",
         "tokenA": "ttUSDTe",
-        "totalA": 11533.988255999984,
-        "totalB": 11343.132018000104,
-        "lastPrice": 1.0116523940756452,
+        "totalA": 11544.398401999984,
+        "totalB": 11333.734527000108,
+        "lastPrice": 1.0134049794133193,
         "data": [
             {
                 "ttUSDTe": 1581.565824,
@@ -27319,6 +27319,41 @@
                 "txHash": "0x3ffc1553a205acd81498de7f20ffa656bff2660de59443df54cfa569701df0f2",
                 "timestamp": 1705095097000,
                 "price": 1.0116523940756452
+            },
+            {
+                "ttUSDTe": 430.57201399999997,
+                "ttUSDTp": -407.805491,
+                "txHash": "0xba0f2d615f4950a21cbab1ede623f619ffda9d6071a8d13e19afe1ed70b90446",
+                "timestamp": 1705105334000,
+                "price": 1.0885499293806766
+            },
+            {
+                "ttUSDTe": -107.883322,
+                "ttUSDTp": 99.602,
+                "txHash": "0x51cae9d2579139d46397a338f0576c5d568c7b48efa52435f0ab960f8aa03d94",
+                "timestamp": 1705105338000,
+                "price": 1.0689987285072484
+            },
+            {
+                "ttUSDTe": -105.95419,
+                "ttUSDTp": 99.602,
+                "txHash": "0x3eb63c246683c8deb667071ec744667461deec756cad7cf2565554031372af46",
+                "timestamp": 1705105342000,
+                "price": 1.0499696548683237
+            },
+            {
+                "ttUSDTe": -104.076351,
+                "ttUSDTp": 99.602,
+                "txHash": "0x394d22e75c2adc0f4f8a77562e6a6f91b488fb1f56f10b8d13f8b6f5f1f3aa82",
+                "timestamp": 1705105350000,
+                "price": 1.0314442795504084
+            },
+            {
+                "ttUSDTe": -102.248005,
+                "ttUSDTp": 99.602,
+                "txHash": "0xdfd8f3892cd190ad5a9584167e30edd8fbb418aa186d98be15f8905e140bcdbe",
+                "timestamp": 1705105358000,
+                "price": 1.0134049794133193
             }
         ]
     }
