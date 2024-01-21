@@ -3,6 +3,12 @@ import axios from 'axios';
 import ParticlesBg from "particles-bg";
 import chartData from '../assets/chartData.json';
 
+const timeFormat = (t) => {
+	let d = new Date(t*1000);
+	d.setHours(d.getHours() + 9);
+	return d.toISOString().replace("T", " ").substring(0, 19);
+}
+
 export default function Header() {
   const [amount, setAmount] = useState(0);
 
@@ -45,10 +51,11 @@ export default function Header() {
               Just meme, enjoy!<br /><br />
 
               Market Cap <br />
-              $GODH: { Math.round(chartData.GODH.lastPrice * 21_000_000).toLocaleString() } $HVH<br />
-              $HH: { Math.round(chartData.HH.lastPrice * chartData.GODH.lastPrice * (10_000_000_000 - amount)).toLocaleString() } $HVH<br /><br />
+              $GODH: ${ Math.round(chartData.GODH.lastPrice * 21_000_000 * chartData.hvhPrice).toLocaleString() }<br />
+              $HH: ${ Math.round(chartData.HH.lastPrice * chartData.GODH.lastPrice * (10_000_000_000 - amount) * chartData.hvhPrice).toLocaleString() }<br /><br />
               
-              Burning hell: { Math.round(amount).toLocaleString() }
+              Burning hell: { Math.round(amount).toLocaleString() }<br />
+              Last Update: { timeFormat(chartData.lastUpdate/1000) }
             </h3>
         </div>
       </div>

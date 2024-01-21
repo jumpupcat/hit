@@ -67,10 +67,6 @@ export default function GodhChart() {
 			<h5 style={{ color: '#D9D9D9' }}>
 				${ tokenList[symbolNum] } / ${chartData[tokenList[symbolNum]].tokenA}
 			</h5>
-
-			<h5 style={{ color: '#D9D9D9' }}>
-				Last Update: { timeFormat(chartData.lastUpdate/1000) }
-			</h5>
 		</div>
 
 		<Chart 
