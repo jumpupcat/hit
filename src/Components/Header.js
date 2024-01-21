@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
 import ParticlesBg from "particles-bg";
+import chartData from '../assets/chartData.json';
 
 export default function Header() {
   const [amount, setAmount] = useState(0);
@@ -42,6 +43,11 @@ export default function Header() {
               Total Supply 21,000,000<br />
               No roadmap No utility No owner<br />
               Just meme, enjoy!<br /><br />
+
+              Market Cap <br />
+              $GODH: { Math.round(chartData.GODH.lastPrice * 21_000_000).toLocaleString() } $HVH<br />
+              $HH: { Math.round(chartData.HH.lastPrice * chartData.GODH.lastPrice * (10_000_000_000 - amount)).toLocaleString() } $HVH<br /><br />
+              
               Burning hell: { Math.round(amount).toLocaleString() }
             </h3>
         </div>

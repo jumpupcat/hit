@@ -15,20 +15,8 @@ const checkList = [
     tokenB: 'HH',
     pool: 'cxdfd439eb7e6775938fd9d6294f8297cac2e9d9ab',
     tokenA: 'GODH',
-    rate: 0.9
-  },
-  {
-    tokenB: 'sHVH',
-    pool: 'cxc5624770e0b63a9890e779194027f9a9e9b9d36b',
-    tokenA: 'WHVH',
     rate: 0.997
-  },
-  {
-    tokenB: 'ttUSDTp',
-    pool: 'cxb095bbcb2c862f6346a476839e1d453b2bc50676',
-    tokenA: 'ttUSDTe',
-    rate: 0.995
-  },
+  }
 ];
 
 const checker = async (a, b, pool, rate) => {
