@@ -76,7 +76,7 @@ const checker = async (a, b, pool, rate) => {
     totalA += v[a];
     totalB += v[b];
   
-    currentPrice = totalA / (totalB+1) * rate
+    currentPrice = currentPriceCalc(totalA, totalB, 0.997)
     v.price = currentPrice;
   }
 
@@ -93,6 +93,18 @@ const checker = async (a, b, pool, rate) => {
     }
   }
 
+  const { data } = await axios.get(`https://scan.havah.io/v3/address/info?address=cx755f8e084b0aea655e24a949896718fca05ed782`);
+
+  const tokenList = data?.data?.tokenList;
+  if(tokenList && tokenList.length > 1) {
+    const tokenA = symbolAmount(tokenList, 'ttUSDTe');
+    const tokenB = symbolAmount(tokenList, 'WHVH');
+    
+    if(tokenA && tokenB) {
+      outputData.hvhPrice = currentPriceCalc(tokenA, tokenB, 0.997);
+    }
+  }
+
   fs.writeFileSync(fileName, JSON.stringify(outputData, null, 4));
 }
 
@@ -101,3 +113,8 @@ const checker = async (a, b, pool, rate) => {
     await checker(c.tokenA, c.tokenB, c.pool, c.rate);
   }
 })();
+
+const symbolAmount = (list, symbol) => 
+  Number(list.find(v => v.scoreSymbol == symbol)?.quantity);
+
+const currentPriceCalc = (a, b, rate) => a / (b+1) * rate;
