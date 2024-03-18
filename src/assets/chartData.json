@@ -1,11 +1,11 @@
 {
-    "lastUpdate": 1710737575145,
+    "lastUpdate": 1710738824897,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
-        "totalA": 31362.958368567906,
-        "totalB": 1813938.8185159983,
-        "lastPrice": 0.017238096420995688,
+        "totalA": 31470.381555680044,
+        "totalB": 1807753.3056949985,
+        "lastPrice": 0.017356324536010655,
         "data": [
             {
                 "WHVH": 1,
@@ -15742,15 +15742,29 @@
                 "txHash": "0x7c912b7c7170eb44fea2bf8dd5c98ec69ab71f7f440dc93b33e0417722e5de25",
                 "timestamp": 1710727295000,
                 "price": 0.017238096420995688
+            },
+            {
+                "WHVH": 56.53979610534,
+                "GODH": -3260.876426,
+                "txHash": "0xe7f5ae895f70a57ae20cee6f69793a36f8c82d7f4046f5ce642f1c63c665bfe2",
+                "timestamp": 1710738558000,
+                "price": 0.017300272810386628
+            },
+            {
+                "WHVH": 50.883391006800004,
+                "GODH": -2924.636395,
+                "txHash": "0x89ac2ee2ae40758c7da5cb8be35dd2dceba021c45df53ddce53cd1b8e97ac171",
+                "timestamp": 1710738577000,
+                "price": 0.017356324536010655
             }
         ]
     },
     "HH": {
         "tokenB": "HH",
         "tokenA": "GODH",
-        "totalA": 865237.2721980008,
-        "totalB": 1602423557.547777,
-        "lastPrice": 0.0005383355454179606,
+        "totalA": 868156.1178140008,
+        "totalB": 1597041503.908656,
+        "lastPrice": 0.0005419719192019777,
         "data": [
             {
                 "GODH": 1,
@@ -17914,8 +17928,15 @@
                 "txHash": "0x7c912b7c7170eb44fea2bf8dd5c98ec69ab71f7f440dc93b33e0417722e5de25",
                 "timestamp": 1710727295000,
                 "price": 0.0005383355454179606
+            },
+            {
+                "GODH": 2918.845616,
+                "HH": -5382053.639121,
+                "txHash": "0x89ac2ee2ae40758c7da5cb8be35dd2dceba021c45df53ddce53cd1b8e97ac171",
+                "timestamp": 1710738577000,
+                "price": 0.0005419719192019777
             }
         ]
     },
-    "hvhPrice": 0.03759964525047526
+    "hvhPrice": 0.03642772413782246
 }
