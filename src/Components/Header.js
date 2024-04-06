@@ -28,7 +28,7 @@ export default function Header() {
         </li> */}
 
         <li>
-          <a className="smoothscroll" href="https://twitter.com/godhavah" target="_blank">
+          <a className="smoothscroll" href="https://twitter.com/godhavah" target="_blank" rel="noopener noreferrer">
             Twitter
           </a>
         </li>
