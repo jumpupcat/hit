@@ -3,25 +3,6 @@ jQuery(document).ready(function($) {
   setTimeout(function() {
     $("h1.responsive-headline").fitText(1, { minFontSize: "40px", maxFontSize: "90px" });
 
-    $(".smoothscroll").on("click", function(e) {
-      e.preventDefault();
-      var target = this.hash,
-        $target = $(target);
-
-      $("html, body")
-        .stop()
-        .animate(
-          {
-            scrollTop: $target.offset().top
-          },
-          800,
-          "swing",
-          function() {
-            window.location.hash = target;
-          }
-        );
-    });
-
     var sections = $("section");
     var navigation_links = $("#nav-wrap a");
 
