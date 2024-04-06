@@ -36,6 +36,7 @@ header {
    
    text-align: center;
    overflow: hidden;
+   z-index: 1;
 }
 
 /* vertically center banner section */

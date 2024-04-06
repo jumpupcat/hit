@@ -139,6 +139,7 @@ table {
 html {
    font-size: 62.5%;
    -webkit-font-smoothing: antialiased;
+   background-color: rgb(43, 43, 67);
 }
 
 body {

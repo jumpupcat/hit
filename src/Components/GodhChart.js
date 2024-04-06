@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import Header from "./Header";
 import { Chart, LineSeries } from "lightweight-charts-react-wrapper";
 import chartData from '../assets/chartData.json';
 
@@ -56,21 +57,24 @@ export default function GodhChart() {
 	}
 
 	return <>
+		<Header />
 		<div 
 			style={{
 				display: 'flex',
 				justifyContent: 'space-evenly',
 				backgroundColor: '#2B2B43', 
+				paddingTop: '6rem',
 			}}
 			onClick={() => setSymbolNum(n => (n+1) % tokenList.length)}
 		>
+
 			<h5 style={{ color: '#D9D9D9' }}>
 				${ tokenList[symbolNum] } / ${chartData[tokenList[symbolNum]].tokenA}
 			</h5>
 		</div>
 
 		<Chart 
-			container={{ style: { width: '100%', minHeight: '800px' } }}
+			container={{ style: { width: '100%', height: '85vh' } }}
 			autoSize
 			localization={{ 
 				priceFormatter: priceFormat,
