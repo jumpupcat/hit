@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Header() {
   return (
     <nav id="nav-wrap">
@@ -10,21 +12,21 @@ export default function Header() {
 
       <ul id="nav" className="nav">
         <li>
-          <a className="smoothscroll" href="/">
+          <Link className="smoothscroll" to="/">
             Home
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a className="smoothscroll" href="/chart">
+          <Link className="smoothscroll" to="/chart">
             Chart
-          </a>
+          </Link>
         </li>
 
         {/* <li>
-          <a className="smoothscroll" href="/game">
+          <Link className="smoothscroll" to="/game">
             Game
-          </a>
+          </Link>
         </li> */}
 
         <li>
