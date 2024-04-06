@@ -5,7 +5,7 @@ import GodhChart from "./Components/GodhChart";
 
 const App = () => (
   <div className="App">
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/chart" element={<GodhChart />} />
