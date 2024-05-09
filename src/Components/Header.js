@@ -28,12 +28,6 @@ export default function Header() {
             Game
           </Link>
         </li> */}
-
-        <li>
-          <a className="smoothscroll" href="https://twitter.com/godhavah" target="_blank" rel="noopener noreferrer">
-            Twitter
-          </a>
-        </li>
       </ul>
     </nav>
   )
