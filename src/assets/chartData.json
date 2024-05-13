@@ -1,11 +1,11 @@
 {
-    "lastUpdate": 1715604339439,
+    "lastUpdate": 1715605271992,
     "GODH": {
         "tokenB": "GODH",
         "tokenA": "WHVH",
-        "totalA": 36442.568108122454,
-        "totalB": 1566412.2072749978,
-        "lastPrice": 0.02319518262170747,
+        "totalA": 37645.40237714206,
+        "totalB": 1516412.2072749978,
+        "lastPrice": 0.024750817250831433,
         "data": [
             {
                 "WHVH": 1,
@@ -17086,6 +17086,13 @@
                 "txHash": "0xb5afbcf8a90cdc7cfb49ec6c66597efa1c38be3e568f475f33818d261443a28d",
                 "timestamp": 1715578782000,
                 "price": 0.02319518262170747
+            },
+            {
+                "WHVH": 1202.8342690196043,
+                "GODH": -50000,
+                "txHash": "0xbcc4ec3cf2dbb638096e001c2d9947acd5ef1e2a014c2f0de6a36228cf5ec408",
+                "timestamp": 1715605110000,
+                "price": 0.024750817250831433
             }
         ]
     },
